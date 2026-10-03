@@ -1,5 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm ci --prefix spellcraft/frontend && npm --prefix spellcraft/frontend run build",
-  "outputDirectory": "public"
+  "outputDirectory": "spellcraft/frontend/dist",
+  "rewrites": [
+    {
+      "source": "/correct",
+      "destination": "/api"
+    }
+  ]
 }
